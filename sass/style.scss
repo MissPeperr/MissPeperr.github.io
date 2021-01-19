@@ -1,4 +1,4 @@
-$font-primary: 'Space Mono', Arial, serif;
+$font-primary: 'Metrophobic', Arial, serif;
 $font-secondary: 'Kaushan Script', cursive;
 
 
@@ -9,6 +9,7 @@ $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
 $brand-primary: #0075b9 !default;
+$brand-secondary: #f1e0e3;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -846,6 +847,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	width: 100%;
 	float: left;
 	margin-bottom: 40px;
+	-webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
+	box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
 	@media screen and (max-width: $screen-sm) {
 		width: 100%;
 	}
@@ -865,16 +869,16 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 	.blog-text {
-		margin-bottom: 30px;
 		position: relative;
 		width: 100%;
 		padding: 30px;
 		float: left;
-		background: $brand-white;
+		background:$brand-lighter;
 
-		-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
-		-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
-		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
+		// -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
+		// -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
+		// box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.06);
+		
 
 		@include transition(.3s);
 
@@ -1277,5 +1281,54 @@ input[type="text"] {
 .animate-box {
 	.js & {
 		opacity: 0;
+	}
+}
+
+// MY STYLES
+.about-me p {
+	font-size: large;
+}
+
+.pro-image {
+	
+	-webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
+	box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
+}
+
+@keyframes scroll_2 {
+	0%   { transform: translateY(0); opacity: 1; }
+	25%  { opacity: 1; }
+	75%  { transform: translateY(.75em); opacity: 0; }
+	100% { transform: translateY(0); opacity: 0; }
+}
+  
+.scroll-icon_container {
+	display: flex;
+	justify-content: center;
+	margin: 7rem 0rem 0rem 0rem;
+	.scroll-icon__dot {
+		display: block;
+		position: absolute;
+		left: 50%;
+		background: $brand-white;
+		height: .5em;
+		width: .5em;
+		top: .6em;
+		margin-left: -.25em;
+		border-radius: 50%;
+		transform-origin: top center;
+		backface-visibility: hidden;
+		animation: scroll_2 2s ease-out infinite;
+	}
+	
+	// General icon style
+	.scroll-icon {
+		display: block;
+		position: relative;
+		height: 3em;
+		width: 1.5em;
+		border: .25em solid $brand-white;
+		border-radius: 1em;
 	}
 }
