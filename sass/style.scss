@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		@include inline-block;
 		a {
 			@include inline-block;
-			color: $brand-primary;
+			color: $brand-white;
 			padding-left: 10px;
 			padding-right: 10px;
 			i {
@@ -869,8 +869,9 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 	.blog-text {
-		position: relative;
+		// position: relative;
 		width: 100%;
+		// height: 30vh;
 		padding: 30px;
 		float: left;
 		background:$brand-lighter;
@@ -1289,8 +1290,7 @@ input[type="text"] {
 	font-size: large;
 }
 
-.pro-image {
-	
+.pro-image {	
 	-webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
 	-moz-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
 	box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.06);
